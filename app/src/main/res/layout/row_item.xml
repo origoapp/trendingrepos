@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/margin_large"
+    android:background="@android:color/white"
+    android:elevation="@dimen/card_view_elevation"
+    android:padding="@dimen/padding"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="@dimen/card_image_view_elevation"
+    app:cardElevation="@dimen/card_view_elevation"
+    android:gravity="center_vertical">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginRight="10dp">
+
+    <LinearLayout
+        android:layout_width="@dimen/layout_size"
+        android:layout_height="@dimen/layout_size"
+        android:padding="5dp"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/avatarll">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="@dimen/circular_image"
+        android:layout_height="@dimen/circular_image"
+        android:id="@+id/avatarImg"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#E4E4E4"
+        android:layout_gravity="center"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/mLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/avatarll">
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/title"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/title"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/sLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/mLinear"
+        android:layout_toEndOf="@+id/avatarll">
+
+        <ImageView
+            android:id="@+id/StarImage"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@mipmap/favourites" />
+
+        <TextView
+            android:id="@+id/starView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="@dimen/font_small"
+            android:text="@string/stars" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_below="@+id/sLinear"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/avatarll"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="@string/description" />
+    <LinearLayout
+        android:id="@+id/mSecLinear"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/description"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/avatarll">
+        <TextView
+            android:id="@+id/langView"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:text="@string/lang" />
+        <TextView
+            android:id="@+id/licenseView"
+            android:layout_width="fill_parent"
+            android:gravity="end"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingEnd="5dp"
+            android:text="@string/license" />
+    </LinearLayout>
+</RelativeLayout>
+    </androidx.cardview.widget.CardView>
